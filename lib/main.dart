@@ -8,12 +8,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Center(
-        child: Icon(
-          Icons.location_on,
-          color: Colors.white,
-          size: 60,
-        ),
+        child: AnimatedButton(),
       ),
     );
+  }
+}
+
+class AnimatedButton extends StatefulWidget {
+  @override
+  _AnimatedButtonState createState() => _AnimatedButtonState();
+}
+
+class _AnimatedButtonState extends State<AnimatedButton> {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: toggleVisible,
+      child: Icon(
+        Icons.location_on,
+        color: Colors.white,
+        size: 60,
+      ),
+    );
+  }
+
+  void toggleVisible() {
+    print('Button clicked');
   }
 }

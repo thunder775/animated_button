@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         child: Icon(
           Icons.location_on,
           color: Colors.white,
-          size: 40,
+          size: 60,
         ),
       ),
     );
